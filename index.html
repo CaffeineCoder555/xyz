@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main overflow-x-hidden relative">
+      <!-- Responsive Nav Bar -->
+      <nav
+        id="nav"
+        class="fixed top-0 left-0 w-full flex justify-between items-center py-6 px-10 z-50 bg-black/15 backdrop-blur-sm text-white"
+      >
+        <!-- Logo -->
+        <div id="logo">
+          <img
+            src="images/Auto Layout Horizontal.png"
+            alt="Logo"
+            class="w-32 md:w-48"
+          />
+        </div>
+
+        <!-- Navigation Links (Hidden on Mobile) -->
+        <div id="nav-links" class="hidden md:flex items-center space-x-6">
+          <a href="#" class="nav-item text-[16px] font-light tracking-wider"
+            >Company</a
+          >
+          <a href="#" class="nav-item text-[16px] font-light tracking-wider"
+            >Services</a
+          >
+          <a href="#" class="nav-item text-[16px] font-light tracking-wider"
+            >Resources</a
+          >
+          <a
+            href="#"
+            class="nav-item text-[16px] font-light tracking-wider border border-[#FFA800] text-[#FFA800] border-2 rounded-full uppercase px-6 py-2"
+            >Contact</a
+          >
+        </div>
+
+        <!-- Menu Button (Visible on Mobile & Tablet) -->
+        <button
+          id="menu-btn"
+          class="md:hidden absolute top-3 right-0 bg-[#FFA800] text-black px-[3px] py-2 rounded-l-lg font-bold"
+        >
+          <i class="ri-more-2-fill"></i>
+        </button>
+
+        <!-- Dropdown Menu (Hidden Initially) -->
+        <div
+          id="menu-box"
+          class="hidden absolute top-16 left-1/2 transform -translate-x-1/2 w-full bg-black text-white rounded-lg p-4 shadow-lg flex flex-col gap-10"
+        >
+          <a
+            href="#"
+            class="menu-item block py-0 text-center text-lg font-medium"
+            >Company</a
+          >
+          <a
+            href="#"
+            class="menu-item block py-0 text-center text-lg font-medium"
+            >Services</a
+          >
+          <a
+            href="#"
+            class="menu-item block py-0 text-center text-lg font-medium"
+            >Resources</a
+          >
+          <a
+            href="#"
+            class="menu-item block py-0 text-center text-lg text-[#FFA800]"
+            >Contact</a
+          >
+        </div>
+      </nav>
+
+      <!-- Wrapper with Background Image -->
+      <div
+        class="wrapper h-[100vh] w-[100vw] relative bg-black overflow-hidden"
+      >
+        <div
+          id="img"
+          class="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 absolute flex items-center justify-center"
+        >
+          <!-- <div class="w-[300px] h-[300px] z-99 md:w-[400px] md:h-[400px] bg-[#ef9364] blur-[70px] opacity-100 rounded-full absolute -bottom-[20%] -left-[10%]" id="red"></div>
+          <div class="w-[300px] h-[300px] z-99 md:w-[400px] md:h-[400px] bg-[#8979cd] blur-[70px] opacity-100 rounded-full absolute -top-[20%] -right-[10%]" id="red"></div> -->
+          <div
+            class="absolute z-55 w-[100%] h-full flex items-center justify-center"
+          >
+            <img
+              src="./images/img1.jpg"
+              id="hero-img"
+              class="w-[30vw] absolute object-cover opacity-0"
+            />
+            <img
+              src="./images/img4.jpg"
+              id="hero-img"
+              class="w-[40vw] absolute object-cover opacity-0"
+            />
+            <img
+              src="./images/img1.jpg"
+              id="hero-img"
+              class="w-[35vw] absolute object-cover opacity-0"
+            />
+            <img
+              src="./images/img2.jpg"
+              id="hero-img"
+              class="w-[25vw] absolute object-cover opacity-0"
+            />
+            <div></div>
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              src="./images/18711548-uhd_3840_2160_30fps.mp4"
+              id="hero-img"
+              class="last-img w-[40vw] absolute object-cover opacity-0"
+            ></video>
+          </div>
+          <!-- Text container -->
+          <div
+            class="h-full w-[100%] z-88 flex items-center justify-center bg-black/60"
+          >
+            <div class="w-[80%] lg:max-w-[523px] relative" id="textWrapper">
+              <h1
+                class="text-white text-[50px] lg:text-[90px] font-bold leading-[0.85]"
+              >
+                Attract
+                <span
+                  class="bg-gradient-to-r from-[#EF9364] to-[#8B7BCF] bg-clip-text text-transparent animated-gradient"
+                  >NewLeads</span
+                >
+                like never before
+              </h1>
+              <p class="text-white/60 tracking-wider">
+                Risus commodo id odio turpis pharetra elementum. Pulvinar porta
+                porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros
+              </p>
+              <form
+                class="flex flex-col md:flex-row gap-5 items-end justify-center"
+              >
+                <input
+                  type="email"
+                  placeholder="Search here"
+                  class="text-sm mt-5 w-[100%] md:w-[70%] px-4 py-3 rounded-full border border-white text-white"
+                />
+                <input
+                  type="submit"
+                  value="Attract"
+                  class="md:w-[30%] md:h-[46px] w-full px-4 py-3 md:py-0 bg-[#FFA800] rounded-full text-black uppercase hover:bg-black hover:text-[#FFA800] hover:border hover:border-2-[#ffa800]"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content below the background -->
+      <div class="w-[100vw] bg-black md:py-[80px] py-[40px]">
+        <div
+          class="md:flex-row flex-col flex justify-between items-left px-[20px] md:px-[80px] mb-10 gap-5"
+        >
+          <h2
+            class="text-white text-[35px] lg:text-[50px] font-bold leading-[1.2]"
+          >
+            Trusted by 200+ companies around the world
+          </h2>
+          <p class="text-white/60 tracking-wider">
+            Risus commodo id odio turpis pharetra elementum. Pulvinar porta
+            porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros
+          </p>
+        </div>
+        <div class="relative overflow-hidden w-full bg-black py-6">
+          <!-- Marquee Container -->
+          <div id="marquee" class="flex space-x-6 w-max">
+            <img src="./images/op1.png" class="w-fit object-cover rounded-lg" />
+            <img src="./images/op2.png" class="w-fit object-cover rounded-lg" />
+            <img src="./images/op3.png" class="w-fit object-cover rounded-lg" />
+            <img src="./images/op4.png" class="w-fit object-cover rounded-lg" />
+            <img src="./images/op5.png" class="w-fit object-cover rounded-lg" />
+            <img src="./images/op1.png" class="w-fit object-cover rounded-lg" />
+            <img src="./images/op2.png" class="w-fit object-cover rounded-lg" />
+            <img src="./images/op3.png" class="w-fit object-cover rounded-lg" />
+          </div>
+        </div>
+      </div>
+
+      <!-- We offer Section -->
+      <div
+        class="bg-[#110F0F] w-[100vw] md:px-[0px] px-[20px] md:py-[80px] py-[40px] text-center flex flex-col items-center justify-center gap-5"
+      >
+        <h2
+          class="text-white text-[35px] lg:text-[50px] font-bold leading-[1.2]"
+        >
+          We Offer
+        </h2>
+        <p class="text-white/60 tracking-wider md:w-1/2">
+          Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
+          feugiat scelerisque in elit. Morbi rhoncus, tellus, eros
+        </p>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-[20px] md:px-[80px]"
+        >
+          <!-- Card 1 -->
+          <div class="border border-white/60 shadow-lg p-4">
+            <img
+              src="./images/frame.png"
+              alt="Image 1"
+              class="w-[42px] h-[42px] object-cover rounded-md"
+            />
+            <h3
+              class="text-[24px] lg:text-[30px] font-bold mt-4 text-left text-white"
+            >
+              Branding
+            </h3>
+            <p class="text-[16px] text-gray-300 mt-1 text-left">
+              Egestas tellus nunc proin amet tellus tincidunt lacus consequat.
+              Ultrices
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="border border-white/60 shadow-lg p-4">
+            <img
+              src="./images/frame (5).png"
+              alt="Image 2"
+              class="w-[42px] h-[42px] object-cover rounded-md"
+            />
+            <h3
+              class="text-[24px] lg:text-[30px] font-bold mt-4 text-left text-white"
+            >
+              Web Development
+            </h3>
+            <p class="text-[16px] text-gray-300 mt-1 text-left">
+              This is a sample description for card 2.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="border border-white/60 shadow-lg p-4">
+            <img
+              src="./images/frame (1).png"
+              alt="Image 3"
+              class="w-[42px] h-[42px] object-cover rounded-md"
+            />
+            <h3
+              class="text-[24px] lg:text-[30px] font-bold mt-4 text-left text-white"
+            >
+              Digital marketing
+            </h3>
+            <p class="text-[16px] text-gray-300 mt-1 text-left">
+              This is a sample description for card 3.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="border border-white/60 shadow-lg p-4">
+            <img
+              src="./images/frame (3).png"
+              alt="Image 4"
+              class="w-[42px] h-[42px] object-cover rounded-md"
+            />
+            <h3
+              class="text-[24px] lg:text-[30px] font-bold mt-4 text-left text-white"
+            >
+              Mobile App
+            </h3>
+            <p class="text-[16px] text-gray-300 mt-1 text-left">
+              This is a sample description for card 4.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="border border-white/60 shadow-lg p-4">
+            <img
+              src="./images/frame (4).png"
+              alt="Image 5"
+              class="w-[42px] h-[42px] object-cover rounded-md"
+            />
+            <h3
+              class="text-[24px] lg:text-[30px] font-bold mt-4 text-left text-white"
+            >
+              SEO
+            </h3>
+            <p class="text-[16px] text-gray-300 mt-1 text-left">
+              This is a sample description for card 5.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="border border-white/60 shadow-lg p-4">
+            <img
+              src="./images/frame (5).png"
+              alt="Image 6"
+              class="w-[42px] h-[42px] object-cover rounded-md"
+            />
+            <h3
+              class="text-[24px] lg:text-[30px] font-bold mt-4 text-left text-white"
+            >
+              User testing
+            </h3>
+            <p class="text-[16px] text-gray-300 mt-1 text-left">
+              This is a sample description for card 6.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- about section-->
+      <div
+        class="md:flex-row flex-col flex justify-between items-center w-[100vw] bg-black md:py-[80px] py-[40px]"
+      >
+        <img src="./images/searching-2194247-0.png" alt="" />
+        <div class="px-[20px] md:px-[80px] mb-10 gap-5">
+          <h2
+            class="text-white text-[35px] lg:text-[50px] font-bold leading-[1.2]"
+          >
+            Why choose us
+          </h2>
+          <p class="text-white/60 tracking-wider mt-5">
+            Commodo diam vulputate dui proin quis enim nibh. Non integer ac
+            libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu
+            elit. Morbi aliquam porttitor mattis consequat neque, tellus
+            blandit.
+          </p>
+          <button
+            class="md:w-[30%] md:h-[46px] w-full px-4 py-3 md:py-0 bg-[#FFA800] rounded-full text-black uppercase hover:bg-black hover:text-[#FFA800] hover:border hover:border-2-[#ffa800] mt-5"
+          >
+            Let’s connect
+          </button>
+        </div>
+      </div>
+
+      <!-- CTA section -->
+      <div
+        class="bg-[#FFA800] px-[20px] md:px-40 py-[40px] md:py-[60px] flex items-center justify-center text-center"
+      >
+        <div class="w-[80%] lg:max-w-[523px] z-88 relative">
+          <h1
+            class="text-[30px] lg:text-[50px] font-bold leading-none text-black"
+          >
+            Let's Disscuss the Idea like never before
+          </h1>
+          <p class="tracking-wider text-black/50">
+            Risus commodo id odio turpis pharetra elementum. Pulvinar porta
+            porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros
+          </p>
+          <form
+            class="flex flex-col md:flex-row gap-5 items-end justify-center"
+          >
+            <input
+              type="email"
+              placeholder="Search here"
+              class="text-sm mt-5 w-[100%] md:w-[70%] px-4 py-3 rounded-full border border-black text-white"
+            />
+            <input
+              type="submit"
+              value="Attract"
+              class="md:w-[30%] md:h-[46px] w-full px-4 py-3 md:py-0 bg-black rounded-full text-[#ffa800] uppercase hover:bg-black hover:text-[#FFA800] hover:border hover:border-2-[#ffa800]"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
